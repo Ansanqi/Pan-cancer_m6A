@@ -1,0 +1,5 @@
+python 20000NA_genelist_rel_calbyself_fixed_right1.py
+wait
+python 20000NA_genelist_get_winscore_byself_fixed_right2.py
+wait
+Rscript NA_value_3.R

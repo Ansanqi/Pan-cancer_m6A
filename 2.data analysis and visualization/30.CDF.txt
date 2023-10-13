@@ -1,0 +1,10 @@
+cor_RBP<- read.csv("cor_RBP.csv", header = T, row.names = 1)
+
+randomcor_RBP<- read.csv("cor_RBP_randomsample_1.csv", header = T, row.names = 1)
+
+
+
+plot( ecdf( abs(as.numeric( as.matrix( cor_RBP[c(1:20),] )) ))    , col="orange", xlim=c(0.01,0.9)
+      ,cex=0.001,xlab="Absolute value of the correlation between RBP expression and cancer-related m6A level" , ylab = "CDF")
+plot( ecdf( abs(as.numeric( as.matrix(cor_RBP[c(21:37),] ))))  ,add=T,col="darkred"   )
+plot( ecdf( abs(as.numeric( as.matrix(randomcor_RBP ))))  ,add=T,col="black"   )
